@@ -36,6 +36,10 @@ Background References:
 
 note this requires the secrets.py file to be setup with wifi credentials and adafruit io
 
+note, for development purposes, be aware that you cannot upload new code when it is 
+    waiting on communication with ESP Wifi -- not sure about the details of this yet,
+    but it works better if you only "upload" while it flashing green imalive bubble...
+
 this version uses TFT display, and requires an M4 class ItsyBitsy
 must create lib/ folder and install the following Adafruit libraries:
     adafruit_bus_device (folder)
@@ -214,38 +218,41 @@ imalive = circle.Circle(90, 20, 10, fill=0x00FF00, outline=0xFF00FF)
 data_screen.append(imalive) 
 
 while True:
+    tempF = (sensor.temperature*1.8) + 32
+    humidity = sensor.relative_humidity
+    
     try:
-        print("Posting temp / humidity data...", end='')
+        # print("Posting temp / humidity data...", end='')
         imalive.fill = 0xff0700     # orange
         feed = 'temperature-1'
-        payload = {'value':sensor.temperature}
-        response = wifi.post(
+        payload = {'value':tempF}
             "https://io.adafruit.com/api/v2/"+secrets['aio_username']+"/feeds/"+feed+"/data",
             json=payload,
             headers={"X-AIO-KEY":secrets['aio_key']})
         print(response.json())
         response.close()
 
-        imalive.fill = 0x000ec9     # blue
+        imalive.fill = 0x0000ff     # blue
         feed = 'humidity-1'
-        payload = {'value':sensor.relative_humidity}
+        payload = {'value':humidity}
         response = wifi.post(
             "https://io.adafruit.com/api/v2/"+secrets['aio_username']+"/feeds/"+feed+"/data",
             json=payload,
             headers={"X-AIO-KEY":secrets['aio_key']})
         print(response.json())
         response.close()
-        print("OK")
+        # print("OK")
 
         # outputMsg = "{0:.0f} F {1:.0f} pct RH".format(((sensor.temperature*1.8)+32), sensor.relative_humidity)
         # text_area.text = outputMsg
 
         display.show(data_screen)
 
-        outputMsg = "{0:.0f}".format(((sensor.temperature*1.8)+32))
+
+        outputMsg = "{0:.0f}".format(tempF)
         temperature_textbox.text = outputMsg
 
-        outputMsg = "{0:.0f}".format(sensor.relative_humidity)
+        outputMsg = "{0:.0f}".format(humidity)
         humidity_textbox.text = outputMsg
         _, _, textwidth, _ = humidity_textbox.bounding_box
         # humidity_textbox.x = (int (DISPLAY_WIDTH/2) - 20) - textwidth
