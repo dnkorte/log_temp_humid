@@ -37,5 +37,25 @@ the following library files (in lib/ folder:
 * adafruit_requests.mpy (IMPORTANT: use 5.3.1 version as 6.x versions have bug)
 * neopixel.mpy
     
+### Bill of Materials
+
+| Description | Supplier | Notes |
+| ----------- | -------- | ----- | 
+| [Adafruit ItsyBitsy M4](https://www.adafruit.com/product/3800) | Adafruit | [Guide](https://learn.adafruit.com/introducing-adafruit-itsybitsy-m4) |
+| [Airlift Itsy](https://www.adafruit.com/product/4363) | Adafruit | [Guide](https://learn.adafruit.com/adafruit-airlift-bitsy-add-on-esp32-wifi-co-processor) |
+| [AHT20 Temp/Humidity Sensor](https://www.adafruit.com/product/4566) | Adafruit | [Guide](https://learn.adafruit.com/adafruit-aht20) |
+| [NeoPixel Jewel](https://www.adafruit.com/product/2226) | Adafruit | [Guide](https://learn.adafruit.com/adafruit-neopixel-uberguide) |
+| [5v Power Block with 2.1mm barrel plug](https://www.adafruit.com/product/276) | Adafruit | |
+| [Panel Mount 2.1mm barrel jack](https://www.adafruit.com/product/610) | Adafruit | |
+| [JST SH 4-pin connector](https://www.adafruit.com/product/4208) | Adafruit | can be hand soldered to PCB, carefully... |
+| [JST SH 4-pin cable](https://www.adafruit.com/product/4210) | Adafruit | . |
+| [M3 Threaded Insert](https://www.mcmaster.com/94459A130/) | McMaster-Carr | 8 pcs (lid-to-box, PCB-to-box) |
+| M3 screws 6mm | | 8 pcs (lid-to-box, PCB to lid) |
+| M3 screws 12mm | | 2 pcs (NeoPixel Jewel) |
+| M2.5 screws 6mm | | 4 pcs (sensor-to-box) |
+| 470 ohm 1/2 w resistor, axial | | for NeoPixel Jewel |
+| 470 uF electrolytic capacitor | | for NeoPixel Jewel |
+| Dupont-style pin and post connectors | | for NeoPixel and power, can solder direct if desired |
+
 
 
