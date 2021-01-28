@@ -2,12 +2,20 @@
 
 <table>
 <tr>
-<td><img width="420" src="https://github.com/dnkorte/log_temp_humid/blob/master/documentation/sample_dashboard_temps.jpg" alt="sample dashboard showing temperatures from multiple units"</td>
-<td><img width="420" src="https://github.com/dnkorte/log_temp_humid/blob/master/documentation/sample_dashboard_humidities.jpg" alt="sample dashboard showing humidities from multiple units"</td>
+<td><img width="420" src="https://github.com/dnkorte/log_temp_humid/blob/master/documentation/sample_dashboard_temps.jpg" alt="sample dashboard showing temperatures from multiple units" /></td>
+<td><img width="420" src="https://github.com/dnkorte/log_temp_humid/blob/master/documentation/sample_dashboard_humidities.jpg" alt="sample dashboard showing humidities from multiple units" /></td>
+</tr>
+<tr>
+<td><img width="420" src="https://github.com/dnkorte/log_temp_humid/blob/master/documentation/pic_box_front.jpg" alt="picture of box front showing NeoPixel status light" /></td>
+<td><img width="420" src="https://github.com/dnkorte/log_temp_humid/blob/master/documentation/pic_box_back.jpg" alt="pic of box back showing sensor" /></td>
+</tr>
+<tr>
+<td><img width="420" src="https://github.com/dnkorte/log_temp_humid/blob/master/documentation/pic_inside_box.jpg" alt="picture of box innards" /></td>
+<td><img width="420" src="https://github.com/dnkorte/log_temp_humid/blob/master/PCB/pcb_render.png" alt="PCB render" /></td>
 </tr>
 </table>
 
-temperature/humidity logger for household rooms; sends data to AdafruitIO via Wifi
+Temperature/humidity logger for household rooms; sends data to AdafruitIO via Wifi
 
 Background Reference Info:
 
